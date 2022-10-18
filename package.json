@@ -1,0 +1,27 @@
+{
+  "name": "Intern.House-website",
+  "version": "1.0.0",
+  "description": "Website for Austin-based intern shared housing company",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^7.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "npm run start --prefix server",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cassidyrose56/Intern.House-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cassidyrose56/Intern.House-website/issues"
+  },
+  "homepage": "https://github.com/cassidyrose56/Intern.House-website#readme"
+}

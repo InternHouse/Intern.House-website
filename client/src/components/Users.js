@@ -11,7 +11,7 @@ constructor(props) {
 }
 
 componentDidMount() {
-   fetch('http://localhost:3000/api/users')
+   fetch('/api/users')
    .then(response => response.json())
    .then(data => {
       this.setState({users: data});

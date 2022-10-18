@@ -9,7 +9,7 @@ app.use(cors({
 
 app.use('/api/users', users);
 
-app.get('/api', (req, res) => {
+app.get('/api', (request, response) => {
     return response.send('hello world from express!')
 })
 
