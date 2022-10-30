@@ -8,7 +8,7 @@ styles.navbar = {
     height: '60px',
 }
 
-styles.leftNav = {
+styles.h1 = {
     backgroundColor: 'transparent',
     color: '#2d3142',
     fontWeight: 'bolder',
@@ -17,7 +17,7 @@ styles.leftNav = {
     marginLeft: '20px',
 }
 
-styles.rightNav = {
+styles.h2 = {
     display: 'inline-block',
     marginRight: '20px',
     color: '#2d3142',
