@@ -14,6 +14,7 @@ componentDidMount() {
    fetch('/api/users')
    .then(response => response.json())
    .then(data => {
+      console.log(data);
       this.setState({users: data});
    })
    .catch((error) => {
