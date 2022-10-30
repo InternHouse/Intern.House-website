@@ -11,23 +11,26 @@ constructor(props) {
 }
 
 componentDidMount() {
-   fetch('http://localhost:3000/api/users')
-   .then(res => res.json())
+   fetch('/api/users')
+   .then(response => response.json())
    .then(data => {
       console.log(data);
       this.setState({users: data});
    })
+   .catch((error) => {
+      console.log(error);
+   });
 }
 
    render() {
      return(
-        <ul>
-         {
-            this.state.users.map(user => (
-               <li>Username: {user.username} Age: {user.age}</li>
-            ))
-         }
-        </ul>
+         <ul>
+            {
+               this.state.users.map(user => (
+                  <li>Username: {user.username} Age: {user.age}</li>
+               ))
+            }
+         </ul>
      )
    }
 }

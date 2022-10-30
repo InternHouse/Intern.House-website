@@ -9,9 +9,8 @@ app.use(cors({
 
 app.use('/api/users', users);
 
-
-app.get('/api', (req, res) => {
-    return res.send('hello world from express!')
+app.get('/api', (request, response) => {
+    return response.send('hello world from express!')
 })
 
 app.listen(3000);

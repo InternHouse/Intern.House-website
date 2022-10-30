@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Website for Austin-based intern shared housing company",
   "main": "index.js",
-  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "webpack-dev-server --mode development --open  --hot",
     "build": "webpack --mode production"
