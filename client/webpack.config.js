@@ -39,11 +39,12 @@ module.exports = {
                         presets: ['@babel/preset-env', '@babel/preset-react']
                     }
                 }
-            }, 
+            },
+            // Sass loader
             {
                 test: /\.s(a|c)ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
-            }
+            },
         ]
     }
 

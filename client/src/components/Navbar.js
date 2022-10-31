@@ -7,7 +7,7 @@ class Navbar extends Component {
         return(
             <nav id='navbar'>
                 <h1 id='title'>Intern.House</h1>
-                <section>
+                <section id='links'>
                     <h2>Testimonials</h2>
                     <h2>About</h2>
                     <h2>Rent</h2>
