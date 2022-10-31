@@ -1,19 +1,37 @@
+// color palette
 
+$almost-black: #2d3142;
+$dark-blue: #4F5D75;
+$orange: #EF8354;
+$light-gray: D9D9D9;
+
+// fonts
+$header-font: "Outfit", sans-serif;
+$p-font: "Roboto", sans-serif;
+
+body {
+    margin: 0;
+}
 
 h1 {
     background-color: transparent;
-    color: #2d3142;
+    color: $almost-black;
     font-weight: bolder;
-    font-family: "Outfit", sans-serif;
+    font-family: $header-font;
     font-size: 30px;
-    margin-left: 20px;
 }
 
 h2 {
     display: inline-block;
-    margin-right: 20px;
-    color: #2d3142;
+    color: $almost-black;
     font-weight: bolder;
-    font-family: "Outfit", sans-serif;
+    font-family: $header-font;
     font-size: 20px;
+}
+
+p {
+    background-color: transparent;
+    color: $almost-black;
+    font-family: $p-font;
+    font-weight: 600;
 }

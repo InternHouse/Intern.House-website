@@ -1,7 +1,15 @@
 #navbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 60px;
+    padding: 0 7% 0 7%;
+}
+#title {
+    grid-column: 1/2;
+}
+#links {
     display: flex;
-    flex-direction: row;
-    justify-content: 'space-between';
-    align-items: 'center';
-    height: '60px';
+    grid-column: 3/4;
+    justify-content: space-between;
+    align-items: center;
 }
