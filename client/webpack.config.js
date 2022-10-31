@@ -45,18 +45,6 @@ module.exports = {
                 test: /\.s(a|c)ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
-            // File loader
-            {
-                test: /\.(png|jp(e*)g|svg|gif)$/,
-                use: [
-                  {
-                    loader: 'file-loader',
-                    options: {
-                      name: 'images/[hash]-[name].[ext]',
-                    },
-                  },
-                ],
-              },
         ]
     }
 
