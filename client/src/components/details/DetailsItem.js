@@ -7,7 +7,7 @@ class DetailsItem extends Component {
         return(
             <div id="details-item-layout">
               {this.props.imageLink}
-              <h1>{this.props.header}</h1>
+              <h1 id='details-header'>{this.props.header}</h1>
               <p>{this.props.text}</p>
             </div>
         )

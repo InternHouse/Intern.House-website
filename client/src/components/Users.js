@@ -1,29 +1,22 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
-class Users extends Component {
+const Users = () => {
+   const [users, setUsers] = useState([]);
 
-constructor(props) {
-   super(props);
-   this.state = {
-      users: [],
-   }
-}
-
-componentDidMount() {
-   fetch('/api/users')
-   .then(response => response.json())
-   .then(data => {
-      console.log(data);
-      this.setState({users: data});
+   useEffect(() => {
+      fetch('/api/users')
+      .then(response => response.json())
+      .then(data => {
+         console.log(data);
+         this.setState({users: data});
+      })
+      .catch((error) => {
+         console.log(error);
+      });
    })
-   .catch((error) => {
-      console.log(error);
-   });
-}
 
-   render() {
-     return(
+   return(
          <ul>
             {
                this.state.users.map(user => (
@@ -32,8 +25,6 @@ componentDidMount() {
             }
          </ul>
      )
-   }
 }
-
 
 export default Users;

@@ -1,5 +1,4 @@
 // color palette
-
 $almost-black: #2d3142;
 $dark-blue: #4F5D75;
 $orange: #EF8354;
@@ -13,7 +12,7 @@ $p-font: "Roboto", sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 540px;
+    height: 35vh;
     padding: 0 7% 0 7%;
 }
 #details-inner-layout {
@@ -29,4 +28,8 @@ $p-font: "Roboto", sans-serif;
     text-align: center;
     width: 25%;
     color: $almost-black;
+}
+
+#details-header {
+    margin-bottom: 0;
 }

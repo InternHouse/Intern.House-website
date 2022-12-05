@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Navbar from './Navbar';
-import Details from './details/Details'
+import Homepage from './Homepage';
+import '../styles/sitewide.scss';
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <Navbar/>
-                <Details/>
-            </div>
-        );
-    }
+const App = () => {
+    return (
+        <div>
+            <Navbar />
+            <Homepage />
+        </div>
+    );
 }
 
 
