@@ -1,24 +1,17 @@
-// color palette
-$almost-black: #2d3142;
-$dark-blue: #4F5D75;
-$orange: #EF8354;
-$light-gray: D9D9D9;
-
-// fonts
-$header-font: "Outfit", sans-serif;
-$p-font: "Roboto", sans-serif;
+@import './variables.scss';
 
 #details-layout {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35vh;
+    height: 55vh;
     padding: 0 7% 0 7%;
 }
+
 #details-inner-layout {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 75%;
 }
 #details-item-layout {
     display: flex;
@@ -26,10 +19,25 @@ $p-font: "Roboto", sans-serif;
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    width: 25%;
-    color: $almost-black;
+    width: 28%;
+    color: $black;
 }
 
 #details-header {
     margin-bottom: 0;
+    letter-spacing: 0.03em;
+}
+
+#details-text {
+    margin-bottom: 0;
+    letter-spacing: 0.02em;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.box-icons {
+    color: $black;
+    min-width: 2em;
+    min-height: 2em;
 }

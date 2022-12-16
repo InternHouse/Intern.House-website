@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+#about-us-layout {
+    height: 70vh;
+    width: 100vw;
+    background-color: $dark-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-us-title {
+    color: $white;
+    letter-spacing: 0.05em;
+}

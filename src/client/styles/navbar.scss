@@ -1,0 +1,31 @@
+@import './variables.scss';
+
+#navbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    padding: 0 7% 0 7%;
+    background-color: rgba($white, 0.9);
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+#title {
+    grid-column: 1/2;
+}
+
+#links {
+    display: flex;
+    grid-column: 3/4;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: inline-block;
+    color: $black;
+    font-weight: bolder;
+    font-family: $header-font;
+    font-size: 20px;
+    text-decoration: none;
+}

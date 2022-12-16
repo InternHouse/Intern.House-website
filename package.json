@@ -2,17 +2,11 @@
   "name": "Intern.House-website",
   "version": "1.0.0",
   "description": "Website for Austin-based intern shared housing company",
-  "main": "index.js",
-  "dependencies": {
-    "chalk": "^5.1.2",
-    "concurrently": "^7.4.0"
-  },
+  "main": "./src/client/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "npm run start --prefix server",
-    "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "install-all": "concurrently \"npm install --prefix server\" \"npm install --prefix client\" \"npm install\""
+    "start": "node ./server/server.js",
+    "dev": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -24,5 +18,28 @@
   "bugs": {
     "url": "https://github.com/cassidyrose56/Intern.House-website/issues"
   },
-  "homepage": "https://github.com/cassidyrose56/Intern.House-website#readme"
+  "homepage": "https://github.com/cassidyrose56/Intern.House-website#readme",
+  "dependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-react": "^7.18.6",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.0",
+    "babel-loader": "^8.2.5",
+    "chalk": "^5.1.2",
+    "concurrently": "^7.4.0",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "react-router": "^6.4.5",
+    "react-router-dom": "^6.4.5",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
 }

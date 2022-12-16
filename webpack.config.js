@@ -1,30 +1,33 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const host = process.env.HOST || 'localhost';
-const fs = require('fs');
-const appDirectory = fs.realpathSync(process.cwd());
-const resolveAppPath = relativePath => path.resolve(appDirectory, relativePath);
-
 
 module.exports = {
-
-    entry: './src/index.js',
+    entry: './src/client/index.js',
     devServer: {
-        static: resolveAppPath('src'),
+        historyApiFallback: true,
+        static: {
+            directory: path.resolve(__dirname, 'dist'),
+            publicPath: '/',
+          },
         compress: true,
         hot: true,
-        host,
         port: 8080,
-        proxy: { "/api/**": { target: 'http://localhost:3000', secure: false }  }
+        proxy: { 
+            "/api/**": { 
+                target: 'http://localhost:3000', 
+                secure: false 
+            },
+        }
      },
     output: {
         path: path.join(__dirname, '/dist'),
+        publicPath: '/',
         filename: 'bundle.js',
     },
 
     plugins: [
         new HTMLWebpackPlugin({
-            template: './src/index.html'
+            template: './src/client/index.html'
         })
     ],
 
