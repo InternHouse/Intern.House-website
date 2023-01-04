@@ -1,37 +1,63 @@
 @import './variables.scss';
 
 #testimonials-layout {
-    height: 70vh;
+    height: 70vh;          
     width: 100vw;
     background-color: $white;
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 }
 
 #testimonials-title {
-    color: $black;
+    color: $black; 
+    margin: 0;
 }
 
 #card-layout {
     display: flex;
     justify-content: space-between;
     width: 75%;
+    height: 80%;
 }
 
 #testimonial-card-layout {
-    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#testimonial-card {
+#testimonial-pic {
+    border-radius: 50%;
+    height: 20%;
+    position: relative;
+    top: 10%;
+    border: solid 7px $white;
+}
+
+#card {
     background-color: $light-grey;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    text-align: center;
+    justify-content: flex-end;
     width: 20vw;
-    height: 100%;
-    padding: 20px;
+    height: 70%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#testimonial-text {
+    text-align: center;
+    font-weight: 400;
+    padding: 0 8% 0 8%;
+    line-height: 1.7rem;
+    margin-bottom: 0;
+}
+
+#name {
+    text-align: center;
+    font-weight: 400;
+    padding: 0 0 5% 0;
+    font-style: italic;
 }
