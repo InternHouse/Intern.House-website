@@ -3,6 +3,8 @@
 body {
     margin: 0;
     background-color: $white;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -27,3 +29,19 @@ p {
     font-family: $p-font;
     font-weight: 600;
 }
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+    margin: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 20px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba($dark-blue, .75);
+    border-radius: 20px;
+    width: 10px;
+  }

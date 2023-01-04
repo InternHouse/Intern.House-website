@@ -9,7 +9,7 @@ const Navbar = () => {
             <section id='links'>
                 <nav className='nav-links'>Testimonials</nav>
                 <nav className='nav-links'>About</nav>
-                <Link to='/rent' className='nav-links'>Rent</Link>
+                <nav className='nav-links'>Rent</nav>
             </section>
         </nav>
     )
