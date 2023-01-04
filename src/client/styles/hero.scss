@@ -4,7 +4,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 55vw 45vw;
-    background-color: $dark-blue;
+    background-color: $light-grey;
 }
 
 #right-hero {
@@ -33,7 +33,7 @@
 }
 
 #hero-text {
-    color: $white;
+    color: $dark-blue;
     text-shadow: 2px 2px $black;
     margin: 0;
     font-size: 5em;

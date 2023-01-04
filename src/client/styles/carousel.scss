@@ -3,14 +3,14 @@
 #carousel-layout {
     height: 90vh;
     width: 100vw;
-    background-color: $dark-blue;
+    background-color: $white;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #carousel-title {
-    color: $white;
+    color: $black;
 }
 
 #carousel-button-section {

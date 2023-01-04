@@ -4,4 +4,34 @@
     height: 70vh;
     width: 100vw;
     background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#testimonials-title {
+    color: $black;
+}
+
+#card-layout {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+#testimonial-card-layout {
+    height: 60%;
+}
+
+#testimonial-card {
+    background-color: $light-grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 20vw;
+    height: 100%;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
