@@ -9,8 +9,44 @@
     align-items: center;
 }
 
+#carousel {
+    width: 40%;
+}
+
+#sliders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #carousel-title {
     color: $black;
+    font-family: $p-font;
+    margin: 0;
+    font-size: 2rem;
+}
+
+#carousel-title-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#carousel-house-title {
+    color: $black;
+    font-family: $p-font;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+#carousel-bed-bath {
+    color: $black;
+    font-weight: 400;
+    font-family: $p-font;
+    font-style: italic;
+    margin-top: 3%;
+    font-size: 1.2rem;
 }
 
 #carousel-button-section {
@@ -21,12 +57,14 @@
 
 .carousel-button {
     background-color: $orange;
+    text-align: center;
     border: none;
     border-radius: 40px;
     font-family: $header-font;
     color: $white;
     font-size: 1.5rem;
     padding: 20px;
-    width: 40%;
+    width: 30%;
     cursor: pointer;
+    text-decoration: none;
 }
