@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 #hero-body {
-    height: 100%;
+    height: 88vh;
     display: grid;
     grid-template-columns: 55vw 45vw;
     background-color: $light-grey;
@@ -13,7 +13,8 @@
 
 #intern-pic {
     height: 100%;
-    width: 100%;
+    width: auto;
+    max-height:100%;
 }
 
 #left-hero {

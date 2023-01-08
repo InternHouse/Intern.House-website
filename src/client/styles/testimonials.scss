@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 #testimonials-layout {
-    height: 70vh;          
+    height: 80vh;          
     width: 100vw;
     background-color: $white;
     display: flex;
@@ -58,6 +58,7 @@
 #name {
     text-align: center;
     font-weight: 400;
-    padding: 0 0 5% 0;
+    padding: 0 8% 0 8%;
     font-style: italic;
+
 }

@@ -5,7 +5,7 @@ const AboutUs = () => {
     return(
         <div id='about-us-layout'>
             <h1 id='about-us-title'>About Us</h1>
-            <p id='about-us-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi lacus sed viverra tellus in hac. Varius vel pharetra vel turpis nunc eget lorem dolor. Commodo quis imperdiet massa tincidunt. Iaculis urna id volutpat lacus. Convallis tellus id interdum velit laoreet id donec. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Sed risus ultricies tristique nulla aliquet enim tortor at auctor. Interdum posuere lorem ipsum dolor sit amet consectetur. Id consectetur purus ut faucibus pulvinar elementum. Elementum integer enim neque volutpat ac tincidunt. Morbi leo urna molestie at elementum eu. In hac habitasse platea dictumst. Diam maecenas ultricies mi eget mauris. Duis at tellus at urna condimentum mattis pellentesque id. Venenatis a condimentum vitae sapien. Metus vulputate eu scelerisque felis imperdiet proin fermentum.</p>
+            <p id='about-us-text'>We’re an Austin-based startup founded by ex-interns and Austin natives. We know how it feels to move to a new city full of strangers and founded Intern.House to make that experience more friendly and straight-forward. Our houses provide a way to build an immediate friend group at your company while also not having to worry about the usual intern housing headaches of finding furnishings, unknown roommates, or complicated leases. We hope you enjoy your stay at your Intern House. Feel free to email us at info@intern.house if you have any questions!.</p>
         </div>
     );
 }
