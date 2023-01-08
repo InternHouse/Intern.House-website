@@ -1,17 +1,17 @@
 import React from 'react';
 import '../styles/testimonials.scss';
 
-const profPic = require('../../assets/pic-default.jpeg')
+// const profPic = require('../../assets/pic-default.jpeg')
 
-const TestimonialCard = () => {
+const TestimonialCard = (props) => {
     return(
-        <div id='testimonial-card-layout'>
-            <img id='testimonial-pic' src={profPic.default}></img>
+        <div id='testimonial-card-layout'> 
+            <img id='testimonial-pic' src={props.photo.default}></img>
             <section id='card'>
                 <p id='testimonial-text'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fusce ut placerat orci nulla pellentesque dignissim.
+                    {props.text}
                 </p>
-                <p id='name'>- Gavin</p>
+                <p id='name'>- {props.name}</p>
             </section>
         </div>
     );
