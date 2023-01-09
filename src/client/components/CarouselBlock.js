@@ -13,25 +13,51 @@ const sabal = require('../../assets/carouselImages/sabal.jpg');
 const rentInfo = [
     {
         houseName: 'Cottingham',
-        bedBath: '5 beds, 2.5 baths',
-        // tour: 
+        bedBath: ' - 5 beds, 2.5 baths',
+        tour: 'https://www.virtuance.com/listing/14302-cottingham-drive-austin-texas',
+        info: [
+                'Oculus VR and PS5',
+                '2 living rooms with smart-tvs',
+                '5 minutes from Tesla',
+                'Garage gym and backyard grill'
+            ]
     },
     {
         houseName: 'Brocade',
-        bedBath: '5 beds, 3 baths',
-        tour: 'https://www.virtuance.com/listing/5904-brocade-drive-austin-texas'
+        bedBath: ' - 5 beds, 3 baths',
+        tour: 'https://www.virtuance.com/listing/5904-brocade-drive-austin-texas',
+        info: [
+                'Brand new house',
+                '5 minutes from Tesla',
+                '2 living rooms with smart-tvs',
+                'Huge master bedroom'
+            ]
     },
     {
         houseName: 'Tai Londo',
-        bedBath: '5 beds, 3 baths',
-        tour: 'https://www.virtuance.com/listing/13500-tai-londo-drive-austin-texas'
+        bedBath: ' - 5 beds, 3 baths',
+        tour: 'https://www.virtuance.com/listing/13500-tai-londo-drive-austin-texas',
+        info: [
+                'Brand new house',
+                '5 minutes from Tesla',
+                '2 living rooms with smart-tvs',
+                'Huge master bedroom'
+            ]
     },
     {
         houseName: 'Sabal Palm',
-        bedBath: '4 beds, 2.5 baths',
-        tour: 'https://www.virtuance.com/listing/15104-sabal-palm-road-austin-texas'
+        bedBath: ' - 4 beds, 2.5 baths',
+        tour: 'https://www.virtuance.com/listing/15104-sabal-palm-road-austin-texas',
+        info: [
+                'Lower price point',
+                'Living room with smart tv',
+                '7 minutes from Tesla',
+                'Large master bedroom'
+            ]
     }
 ];
+
+
 
 const CarouselSection = () => {
 
@@ -58,21 +84,21 @@ const CarouselSection = () => {
                 visibleSlides={1}
                 hasMasterSpinner
                 naturalSlideWidth={100}
-                naturalSlideHeight={60}    
+                naturalSlideHeight={37}    
             >
                 <div id='sliders' style={{position:'relative'}}>
                     <Slider>
                         <Slide index={0}>
-                            <Image src={cottingham.default} className='carousel-image' style={{height:'300px', width:'auto'}} />
+                            <Image src={cottingham.default} className='carousel-image' style={{height:'350px', width:'auto'}} />
                         </Slide>
                         <Slide index={1}>
-                            <Image src={brocade.default} className='carousel-image'  style={{height:'300px', width:'auto'}} />
+                            <Image src={brocade.default} className='carousel-image'  style={{height:'350px', width:'auto'}} />
                         </Slide>
                         <Slide index={2}>
-                            <Image src={taiLondo.default} className='carousel-image'  style={{height:'300px', width:'auto'}}/>
+                            <Image src={taiLondo.default} className='carousel-image'  style={{height:'350px', width:'auto'}}/>
                         </Slide>
                         <Slide index={3}>
-                            <Image src={sabal.default} className='carousel-image' style={{height:'300px', width:'auto'}}/>
+                            <Image src={sabal.default} className='carousel-image' style={{height:'350px', width:'auto'}}/>
                         </Slide>
                     </Slider>
                     <ButtonBack onClick={handlePrevious} id='button-back' className='arrows'><i className="bi bi-arrow-left-circle-fill"></i></ButtonBack>
@@ -81,13 +107,15 @@ const CarouselSection = () => {
                 </div>
             </CarouselProvider>
 
-            <section id='carousel-title-section'>
-                <h2 id='carousel-house-title'>
-                    {rentInfo[index].houseName}
-                </h2>
-                <h3 id='carousel-bed-bath'>
-                    {rentInfo[index].bedBath}
-                </h3>
+            <section id='carousel-info-section'>
+                <section id='carousel-title-section'>
+                    <h1 id='carousel-house-title'>{rentInfo[index].houseName}</h1><h3 id='carousel-bed-bath'>{rentInfo[index].bedBath}</h3>
+                </section>
+                <div id='info-list'>
+                    {rentInfo[index].info.map((el) => {
+                        return <p className='list-items'>{el}</p>
+                    })}
+                </div>
             </section>
             <section id='carousel-button-section'>
                 <motion.a whileHover={{ scale: 1.1 }}

@@ -18,6 +18,15 @@
     text-align: center;
 }
 
+#contact-section {
+    display: flex;
+    
+}
+
+.headshot {
+    height: 200px;
+}
+
 #about-us-text {
     grid-column: 2 / 3;
     text-align: center;
@@ -25,10 +34,9 @@
     letter-spacing: 0.05rem;
     font-weight: 400;
     margin: 3% 20% 0 0;
-    line-height: 2rem;
+    line-height: 2.2rem;
     font-size: 1.5rem;
     text-align: justify;
-    // align-self: center;
 }
 
 #email-link {

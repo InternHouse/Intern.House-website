@@ -13,11 +13,10 @@ const Navbar = () => {
     if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
         document.getElementById("navbar").style.height = "60px";
         document.getElementById("nav-logo").style.height = "50px";
-        // document.getElementById("logo").style.fontSize = "25px";
+        // document.getElementById("navbar").style.boxShadow = "0 2px 4px 0 rgba(0,0,0,.2)";
     } else {
         document.getElementById("navbar").style.height = "12vh";
         document.getElementById("nav-logo").style.height = "10vh";
-        // document.getElementById("logo").style.fontSize = "35px";
     }
     }
 

@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 #carousel-layout {
-    height: 90vh;
+    height: fit-content;
     width: 100vw;
     background-color: $white;
     display: flex;
@@ -11,7 +11,7 @@
 }
 
 #carousel {
-    width: 40%;
+    width: 70%;
     text-align: center;
 }
 
@@ -79,11 +79,19 @@ i {
     font-size: 2.5rem;
 }
 
-#carousel-title-section {
+#carousel-info-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 15px;
+}
+
+#carousel-title-section {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 3%;
 }
 
 #carousel-house-title {
@@ -98,13 +106,29 @@ i {
     font-weight: 400;
     font-family: $p-font;
     font-style: italic;
-    margin-top: 3%;
+    margin: 0;
+    margin-left: 1%;
     font-size: 1.2rem;
+}
+
+#info-list {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-top: 0;
+}
+
+.list-items {
+    font-family: $p-font;
+    color: $black;
 }
 
 #carousel-button-section {
     display: flex;
-    width: 60%;
+    width: 40%;
     justify-content: space-evenly;
 }
 
@@ -116,7 +140,7 @@ i {
     font-family: $header-font;
     color: $white;
     font-size: 1.5rem;
-    padding: 20px;
+    padding: 12px;
     width: 30%;
     cursor: pointer;
     text-decoration: none;
