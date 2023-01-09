@@ -17,7 +17,7 @@ const rentInfo = [
         tour: 'https://www.virtuance.com/listing/14302-cottingham-drive-austin-texas',
         info: [
                 'Oculus VR and PS5',
-                '2 living rooms with smart-tvs',
+                '2 living rooms with smart TVs',
                 '5 minutes from Tesla',
                 'Garage gym and backyard grill'
             ]
@@ -50,7 +50,7 @@ const rentInfo = [
         tour: 'https://www.virtuance.com/listing/15104-sabal-palm-road-austin-texas',
         info: [
                 'Lower price point',
-                'Living room with smart tv',
+                'Living room with smart TV',
                 '7 minutes from Tesla',
                 'Large master bedroom'
             ]
