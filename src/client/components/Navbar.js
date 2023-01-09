@@ -46,6 +46,7 @@ const Navbar = () => {
                         activeClass="active"
                         to="details-layout"
                         spy={true}
+                        offset={-80}
                         smooth={true}
                         duration={500}
                     >

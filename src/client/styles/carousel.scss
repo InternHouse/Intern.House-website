@@ -7,7 +7,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
 }
 
 #carousel {
@@ -90,8 +89,7 @@ i {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    width: 100%;
-    margin-bottom: 3%;
+    width: 110%;
 }
 
 #carousel-house-title {
@@ -113,23 +111,27 @@ i {
 
 #info-list {
     width: fit-content;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    height: fit-content;
     justify-items: center;
     align-items: center;
-    margin-top: 0;
+    margin: 1vh 0 1.5vh 0;
+    background-color: lighten($dark-blue, 50);
+    border-radius: 20px;
+    padding: 8px 12px;
 }
 
 .list-items {
     font-family: $p-font;
     color: $black;
+    font-weight: 400;
+    margin: 5px 0 5px 0;
+    text-align: center;
 }
 
 #carousel-button-section {
     display: flex;
     width: 40%;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .carousel-button {
@@ -140,8 +142,9 @@ i {
     font-family: $header-font;
     color: $white;
     font-size: 1.5rem;
-    padding: 12px;
+    padding: 8px;
     width: 30%;
+    margin: 0 2%;
     cursor: pointer;
     text-decoration: none;
 }

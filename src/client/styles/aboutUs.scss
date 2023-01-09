@@ -20,23 +20,48 @@
 
 #contact-section {
     display: flex;
-    
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 15% 15% 15%;
+}
+
+
+
+.about-us-name-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .headshot {
-    height: 200px;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    // filter: grayscale(100%);
+}
+
+.owner-name {
+    margin-bottom: 0;
+}
+
+.owner-email {
+    background-color: transparent;
+    color: $black;
+    font-family: $p-font;
+    font-weight: 500;
+
 }
 
 #about-us-text {
     grid-column: 2 / 3;
     text-align: center;
     color: $dark-blue;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.03rem;
     font-weight: 400;
-    margin: 3% 20% 0 0;
-    line-height: 2.2rem;
-    font-size: 1.5rem;
-    text-align: justify;
+    margin: 0 15% 0 0;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 #email-link {

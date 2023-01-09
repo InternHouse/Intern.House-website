@@ -28,9 +28,9 @@ const rentInfo = [
         tour: 'https://www.virtuance.com/listing/5904-brocade-drive-austin-texas',
         info: [
                 'Brand new house',
+                '2 living rooms with smart TVs',
                 '5 minutes from Tesla',
-                '2 living rooms with smart-tvs',
-                'Huge master bedroom'
+                'Smart home lights and speakers'
             ]
     },
     {
@@ -40,7 +40,7 @@ const rentInfo = [
         info: [
                 'Brand new house',
                 '5 minutes from Tesla',
-                '2 living rooms with smart-tvs',
+                '2 living rooms with smart TVs',
                 'Huge master bedroom'
             ]
     },
