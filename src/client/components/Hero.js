@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
+import { motion } from 'framer-motion';
 import '../styles/hero.scss';
 
 const internPic = require('../../assets/intern-pic.png')
@@ -16,11 +17,15 @@ const Hero = () => {
                     <Link id='title'
                         activeClass="active"
                         to="carousel-layout"
-                        offset={-65}
+                        offset={-115}
                         spy={true}
                         smooth={true}
                         duration={500}>
-                        <button id='rental-button'>Explore our rentals for interns</button>
+                        <motion.button 
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }} 
+                            whileInView={{ opacity: 1 }}
+                            id='rental-button'>Explore our rentals for interns</motion.button>
                     </Link>
                     
                 </section>

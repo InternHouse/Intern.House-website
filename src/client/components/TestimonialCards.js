@@ -1,8 +1,6 @@
 import React from 'react';
 import '../styles/testimonials.scss';
 
-// const profPic = require('../../assets/pic-default.jpeg')
-
 const TestimonialCard = (props) => {
     return(
         <div id='testimonial-card-layout'> 
@@ -11,7 +9,12 @@ const TestimonialCard = (props) => {
                 <p id='testimonial-text'>
                     {props.text}
                 </p>
-                <p id='name'>- {props.name}</p>
+                <hr id='line'></hr>
+                <section id='test-bottom'>
+                    <p id='name'>{props.name}</p>
+                    <p id='house'>{props.house}</p>
+                </section>
+                
             </section>
         </div>
     );

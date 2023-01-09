@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import '../styles/carousel.scss';
 import { ButtonBack, ButtonNext,
     CarouselProvider, Image, ImageWithZoom, Slide, Slider, DotGroup } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import { motion } from 'framer-motion';
 
-const cottingham = require('../../assets/carouselImages/house-placeholder.png')
-const brocade = require('../../assets/carouselImages/brocade.png');
-const taiLondo = require('../../assets/carouselImages/taiLondo.png');
-const sabal = require('../../assets/carouselImages/sabal.png');
+const cottingham = require('../../assets/carouselImages/cottingham.png')
+const brocade = require('../../assets/carouselImages/brocade.jpg');
+const taiLondo = require('../../assets/carouselImages/taiLondo.jpg');
+const sabal = require('../../assets/carouselImages/sabal.jpg');
 
 const rentInfo = [
     {
@@ -26,7 +28,7 @@ const rentInfo = [
     },
     {
         houseName: 'Sabal Palm',
-        bedBath: '4 beds, 3 baths',
+        bedBath: '4 beds, 2.5 baths',
         tour: 'https://www.virtuance.com/listing/15104-sabal-palm-road-austin-texas'
     }
 ];
@@ -50,67 +52,35 @@ const CarouselSection = () => {
         <div id='carousel-layout'>
             <h1 id='carousel-title'>Intern Houses in Austin, TX</h1>
             <CarouselProvider
-                visibleSlides={1}
+                id='carousel'
                 totalSlides={4}
-                step={1}
-                naturalSlideWidth={400}
-                naturalSlideHeight={500}
                 infinite
+                visibleSlides={1}
                 hasMasterSpinner
+                naturalSlideWidth={100}
+                naturalSlideHeight={60}    
             >
-                <div id='sliders'>
+                <div id='sliders' style={{position:'relative'}}>
                     <Slider>
                         <Slide index={0}>
-                            <ImageWithZoom src={cottingham.default} />
+                            <Image src={cottingham.default} className='carousel-image' style={{height:'300px', width:'auto'}} />
                         </Slide>
                         <Slide index={1}>
-                            <ImageWithZoom src={brocade.default} />
+                            <Image src={brocade.default} className='carousel-image'  style={{height:'300px', width:'auto'}} />
                         </Slide>
                         <Slide index={2}>
-                            <ImageWithZoom src={taiLondo.default} />
+                            <Image src={taiLondo.default} className='carousel-image'  style={{height:'300px', width:'auto'}}/>
                         </Slide>
                         <Slide index={3}>
-                            <ImageWithZoom src={sabal.default} />
+                            <Image src={sabal.default} className='carousel-image' style={{height:'300px', width:'auto'}}/>
                         </Slide>
                     </Slider>
-                    <div>
-                        <ButtonBack onClick={handlePrevious} className='slider-btns'>Back</ButtonBack>
-                        <ButtonNext onClick={handleNext} className='slider-btns'>Next</ButtonNext>
-                    </div>
-                    <DotGroup style={{textAlign:'center'}}/>
+                    <ButtonBack onClick={handlePrevious} id='button-back' className='arrows'><i className="bi bi-arrow-left-circle-fill"></i></ButtonBack>
+                    <ButtonNext onClick={handleNext} id='button-next' className='arrows'><i className="bi bi-arrow-right-circle-fill"></i></ButtonNext>
+                    <DotGroup />
                 </div>
             </CarouselProvider>
 
-                {/* <CarouselProvider
-                    id='carousel'
-                    visibleSlides={1}
-                    totalSlides={4}
-                    step={1}
-                    naturalSlideWidth={400}
-                    naturalSlideHeight={500}  
-                    isIntrinsicHeight  
-                    infinite
-                    hasMasterSpinner
-                >
-                    <div style={{position:'relative'}}>
-                       <Slider>
-                            <Slide index={0}>
-                                <Image src={cottingham} style={{height:'200px', width:'auto'}}/>
-                            </Slide>
-                            <Slide index={1}>
-                                <Image src={brocade} style={{height:'200px', width:'auto'}}/>
-                            </Slide>
-                            <Slide index={2}>
-                                <Image src={taiLondo} style={{height:'200px', width:'auto'}} />
-                            </Slide>
-                            <Slide index={3} style={{height:'200px', width:'auto'}}>
-                                <Image src={sabal}  style={{height:'200px', width:'auto'}}/>
-                            </Slide>
-                        </Slider>
-                    </div>
-                    <ButtonBack onClick={handlePrevious} className='slider-btns'>Back</ButtonBack>
-                    <ButtonNext onClick={handleNext} className='slider-btns'>Next</ButtonNext>
-                </CarouselProvider> */}
             <section id='carousel-title-section'>
                 <h2 id='carousel-house-title'>
                     {rentInfo[index].houseName}
@@ -120,8 +90,12 @@ const CarouselSection = () => {
                 </h3>
             </section>
             <section id='carousel-button-section'>
-                <a id='3d-tour-button' className='carousel-button' href={rentInfo[index].tour} target='_blank'>3D Tour</a>
-                <a id='apply-button' className='carousel-button'>Apply</a>
+                <motion.a whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }} 
+                            whileInView={{ opacity: 1 }} id='3d-tour-button' className='carousel-button' href={rentInfo[index].tour} target='_blank'>3D Tour</motion.a>
+                <motion.a whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }} 
+                            whileInView={{ opacity: 1 }} id='apply-button' className='carousel-button' href='https://my.innago.com/a/B6a2HUbH71b' target='_blank'>Apply</motion.a>
             </section>
         </div>
     );

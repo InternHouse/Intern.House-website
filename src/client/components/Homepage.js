@@ -4,6 +4,7 @@ import Details from './details/Details'
 import CarouselBlock from './CarouselBlock';
 import Testimonials from './Testimonials';
 import AboutUs from './AboutUs';
+import Footer from './Footer';
 import { scroller, Element } from "react-scroll";
 
 
@@ -15,6 +16,7 @@ const Homepage = () => {
             <CarouselBlock />
             <Testimonials />
             <AboutUs />
+            <Footer />
         </div>
     );
 }

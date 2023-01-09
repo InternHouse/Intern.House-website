@@ -2,7 +2,7 @@
 
 #navbar {
     display: grid;
-    grid-template-columns: auto 20vw auto;
+    grid-template-columns: 1fr 20vw 1fr;
     padding: 0 7% 0 7%;
     height: 12vh;
     background-color: rgba($white, 0.9);
@@ -19,6 +19,7 @@
 #nav-logo {
     height: 10vh;
     grid-column: 2 / 3;
+    cursor: pointer;
 }
 
 #title {
@@ -48,4 +49,5 @@
     font-family: $header-font;
     font-size: 20px;
     text-decoration: none;
+    cursor: pointer;
 }

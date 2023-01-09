@@ -45,9 +45,9 @@ module.exports = {
             },
             // Sass loader
             {
-                test: /\.s(a|c)ss$/i,
+                test: /\.(sa|sc|c)ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
-            },
+              },
             {
 				test: /\.(png|jpe?g|gif)$/i,
 				use: [

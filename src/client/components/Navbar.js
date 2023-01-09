@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
+import { motion } from 'framer-motion';
 import '../styles/navbar.scss';
 
 const navLogo = require('../../assets/navLogo.png')
@@ -32,7 +33,14 @@ const Navbar = () => {
                         smooth={true}
                         duration={500}
                     >
-                        Rent
+                        <motion.p 
+                            className='p-text'
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }} 
+                            whileInView={{ opacity: 1 }}
+                        >
+                            Rent
+                        </motion.p>
                     </Link>
                     <Link
                         className='nav-links'
@@ -42,7 +50,14 @@ const Navbar = () => {
                         smooth={true}
                         duration={500}
                     >
-                        Details
+                        <motion.p 
+                            className='p-text'
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }} 
+                            whileInView={{ opacity: 1 }}
+                        >
+                            Details
+                        </motion.p>
                     </Link>
                 </section>
                 <section className='links'>
@@ -55,20 +70,33 @@ const Navbar = () => {
                         smooth={true}
                         duration={500}
                     >
-                        <img src={navLogo.default} id='nav-logo'></img>
+                        <motion.img 
+                        className='p-text'
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }} 
+                        whileInView={{ opacity: 1 }}
+                        src={navLogo.default} 
+                        id='nav-logo'></motion.img>
                     </Link> 
                 </section>
             <section id='right-nav' className='links'>
                 <Link
                     className='nav-links'
                     activeClass="active"
-                    offset={-110}
+                    offset={-70}
                     to="testimonials-layout"
                     spy={true}
                     smooth={true}
                     duration={500}
                 >
-                    Testimonials
+                    <motion.p 
+                        className='p-text'
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }} 
+                        whileInView={{ opacity: 1 }}
+                    >
+                        Testimonials
+                    </motion.p>
                 </Link>
                 <Link
                     className='nav-links'
@@ -79,7 +107,14 @@ const Navbar = () => {
                     smooth={true}
                     duration={500}
                 >
-                    About
+                    <motion.p 
+                        className='p-text'
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }} 
+                        whileInView={{ opacity: 1 }}
+                    >
+                        About Us
+                    </motion.p>
                 </Link>
                 
             </section>
