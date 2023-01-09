@@ -110,14 +110,13 @@ i {
 }
 
 #info-list {
-    width: fit-content;
+    width: 110%;
     height: fit-content;
-    justify-items: center;
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    // justify-items: center;
     align-items: center;
     margin: 1vh 0 1.5vh 0;
-    background-color: lighten($dark-blue, 50);
-    border-radius: 20px;
-    padding: 8px 12px;
 }
 
 .list-items {
@@ -125,12 +124,12 @@ i {
     color: $black;
     font-weight: 400;
     margin: 5px 0 5px 0;
-    text-align: center;
+    list-style-position: inside;
 }
 
 #carousel-button-section {
     display: flex;
-    width: 40%;
+    width: 50%;
     justify-content: center;
 }
 
@@ -144,7 +143,7 @@ i {
     font-size: 1.5rem;
     padding: 8px;
     width: 30%;
-    margin: 0 2%;
+    margin: 0 4%;
     cursor: pointer;
     text-decoration: none;
 }

@@ -111,11 +111,11 @@ const CarouselSection = () => {
                 <section id='carousel-title-section'>
                     <h1 id='carousel-house-title'>{rentInfo[index].houseName}</h1><h3 id='carousel-bed-bath'>{rentInfo[index].bedBath}</h3>
                 </section>
-                <div id='info-list'>
+                <ul id='info-list'>
                     {rentInfo[index].info.map((el) => {
-                        return <p className='list-items'>{el}</p>
+                        return <li className='list-items'>{el}</li>
                     })}
-                </div>
+                </ul>
             </section>
             <section id='carousel-button-section'>
                 <motion.a whileHover={{ scale: 1.1 }}
