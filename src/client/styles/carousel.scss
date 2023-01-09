@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 #carousel-layout {
-    height: 90vh;
+    height: fit-content;
     width: 100vw;
     background-color: $white;
     display: flex;
@@ -9,24 +9,142 @@
     align-items: center;
 }
 
+#carousel {
+    width: 70%;
+    text-align: center;
+}
+
+#sliders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.carousel-image { 
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+#button-back {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#button-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.arrows {
+    background-color: transparent;
+    border: none;
+}
+
+i {
+    font-size: 2.5rem;
+    color: $black;
+}
+
+.prc-dotGroup {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .carousel__dot {
+    height: 15px;
+    width: 15px;
+    margin: 3px;
+    border-radius: 50%;
+    border: 1px solid $black;
+  }
+  .carousel__dot--selected {
+    background-color: $dark-blue;
+  }
+
 #carousel-title {
     color: $black;
+    font-family: $p-font;
+    margin: 0;
+    margin-bottom: 2%;
+    font-size: 2.5rem;
+}
+
+#carousel-info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#carousel-title-section {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 110%;
+}
+
+#carousel-house-title {
+    color: $black;
+    font-family: $p-font;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+#carousel-bed-bath {
+    color: $black;
+    font-weight: 400;
+    font-family: $p-font;
+    font-style: italic;
+    margin: 0;
+    margin-left: 1%;
+    font-size: 1.2rem;
+}
+
+#info-list {
+    width: fit-content;
+    height: fit-content;
+    justify-items: center;
+    align-items: center;
+    margin: 1vh 0 1.5vh 0;
+    background-color: lighten($dark-blue, 50);
+    border-radius: 20px;
+    padding: 8px 12px;
+}
+
+.list-items {
+    font-family: $p-font;
+    color: $black;
+    font-weight: 400;
+    margin: 5px 0 5px 0;
+    text-align: center;
 }
 
 #carousel-button-section {
     display: flex;
-    width: 60%;
-    justify-content: space-evenly;
+    width: 40%;
+    justify-content: center;
 }
 
 .carousel-button {
     background-color: $orange;
+    text-align: center;
     border: none;
     border-radius: 40px;
     font-family: $header-font;
     color: $white;
     font-size: 1.5rem;
-    padding: 20px;
-    width: 40%;
+    padding: 8px;
+    width: 30%;
+    margin: 0 2%;
     cursor: pointer;
+    text-decoration: none;
 }

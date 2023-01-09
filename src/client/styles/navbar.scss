@@ -2,7 +2,8 @@
 
 #navbar {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 20vw 1fr;
+    box-shadow: 0 2px 4px 0 rgba($dark-blue, .4);
     padding: 0 7% 0 7%;
     height: 12vh;
     background-color: rgba($white, 0.9);
@@ -12,8 +13,18 @@
     z-index: 1;
 }
 
-#title {
+#left-nav {
     grid-column: 1 / 2;
+}
+
+#nav-logo {
+    height: 10vh;
+    grid-column: 2 / 3;
+    cursor: pointer;
+}
+
+#title {
+    // grid-column: 1 / 2;
     margin: 0;
     background-color: transparent;
     color: $black;
@@ -22,10 +33,13 @@
     font-size: 30px;
 }
 
-#links {
-    display: flex;
+#right-nav {
     grid-column: 3 / 4;
-    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -36,4 +50,5 @@
     font-family: $header-font;
     font-size: 20px;
     text-decoration: none;
+    cursor: pointer;
 }
